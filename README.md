@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # mysys-website
 
 ## Build Setup
@@ -18,3 +19,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+=======
+# mysys-nuxt
+>>>>>>> dce0c3d86b301ed96fc7c3be252f56ecc27954b4
