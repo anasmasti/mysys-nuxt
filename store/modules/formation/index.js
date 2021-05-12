@@ -1,13 +1,13 @@
-import mutations from './mutations'
-import actions from './actions'
-import state from './state'
+// import { mutations } from './mutations'
+import { actions } from './actions'
+import { state } from './state'
 
 export const formationStore = {
     namespaced: true,
     state,
-    // getters,
-    mutations, //mutations
+    mutations,
     actions,
+    //METHODS
     methods: {
         //UPDATE WINDOW'S TITLE
         UpdateDocTitle(title) {

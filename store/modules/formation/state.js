@@ -1,4 +1,4 @@
-export default () => ({
+export const state = () => ({
     doc_title: undefined,
     domaines: [],
     themes: [],

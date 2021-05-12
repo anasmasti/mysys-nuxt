@@ -35,7 +35,7 @@
     <!-- else -->
     <ul v-else-if="!domaines && !is_domaineLoaded && !domaines.length" class="onglet w-100 nav nav-tabs align-items-center text-center" id="myTab" role="tablist">
       <li class="col-12 loading p-0">
-        <img src="../../assets/img/loading2.gif" class="loading_img_sm">
+        <img src="~/assets/img/loading2.gif" class="loading_img_sm">
       </li>
     </ul>
     <!-- else -->
@@ -65,7 +65,7 @@
     <!-- tab-content -->
     <!-- LOADING .. -->
     <div v-else-if="!is_domaineLoaded && !has_domaineError" class="loading">
-      <img :src="require('../../assets/img/loading.gif')" class="loading_img_sm" alt="loading pic">
+      <img :src="require('~/assets/img/loading.gif')" class="loading_img_sm" alt="loading pic">
     </div>
     <!-- LOADING .. -->
     <!-- EMPTY .. -->
@@ -90,7 +90,7 @@
 </template>
 
 <style lang="scss">
-  @import '../../assets/css/domaine.scss';
+  @import '~/assets/css/domaine.scss';
 </style>
 
 <script>

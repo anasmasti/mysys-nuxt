@@ -17,7 +17,7 @@ export default {
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-
+        '~/assets/css/_style.scss'
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -50,6 +50,20 @@ export default {
         baseURL: 'https://dashboard.mysys.ma',
 
     },
+
+    publicRuntimeConfig: {
+        axios: {
+            browserBaseURL: process.env.BROWSER_BASE_URL
+        }
+    },
+
+    privateRuntimeConfig: {
+        axios: {
+            baseURL: process.env.BASE_URL
+        }
+    },
+
+
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {}

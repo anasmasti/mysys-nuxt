@@ -1,4 +1,4 @@
-export default {
+export const actions = {
     //FETCH DATA
     async fetchDomaineData({ commit }) {
         await this.$axios.$get('/api/mysys/domaines')

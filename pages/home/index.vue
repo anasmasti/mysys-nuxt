@@ -1,11 +1,11 @@
 <template>
   <div id="home" class="home">
     <div class="bg_jumbo">
-      <NavBarForDFormation />
+      <NavBarForHome />
       <Landing />
     </div>
 
-    <!-- <Domaine /> -->
+    <Domaine />
     <OurService />
 
     <div class="d-flex flex-wrap py-5">
