@@ -1,0 +1,46 @@
+@import 'variables';
+.footer {
+    background-color: $dark;
+    color: $light;
+    z-index: 1;
+}
+
+.footer-title {
+    font-size: 18px;
+    padding-left: 8px !important;
+    border-left: .3rem solid $mysyscolor1;
+}
+
+.footer i {
+    padding: .1rem;
+    margin: .2rem;
+    border-radius: 2rem;
+    color: $mysyscolor1;
+}
+
+.footer-item {
+    width: 100%;
+    margin-top: -5px !important;
+}
+
+.footer-item a {
+    color: $white !important;
+}
+
+.footer-item i {
+    font-size: 18px !important;
+}
+
+.social_footer>li {
+    display: inline;
+    list-style: none !important;
+}
+
+.social_footer>li>a i {
+    color: #f5f5f7 !important;
+    font-size: 30px;
+}
+
+.social_footer>li>a:hover i {
+    color: #188eee !important;
+}

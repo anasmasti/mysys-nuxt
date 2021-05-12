@@ -1,0 +1,46 @@
+@import './variables';
+.bg_jumbo {
+    background: {
+        color: linear-gradient(rgba(0, 0, 0, 0.186), rgba(0, 0, 0, 0.775));
+        image: url("~@/assets/img/bg/landing-bg.jpg");
+    }
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+.j-card {
+    display: flex;
+    min-width: 5rem !important;
+    max-width: 15rem !important;
+    border-radius: .1rem !important;
+    @extend .border-outline-0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .j-card {
+        flex: 1 0 100% !important;
+        min-width: 5rem !important;
+        max-width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .j-card {
+        flex: 1 0 50% !important;
+        min-width: 5rem !important;
+        max-width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .j-card {
+        flex: 1 0 20% !important;
+    }
+}
+
+@media only screen and (min-width: 923px) and (max-width: 1024px) {
+    .j-card {
+        flex: 1 0 25% !important;
+    }
+}

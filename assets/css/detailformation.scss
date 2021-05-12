@@ -1,0 +1,135 @@
+@import 'variables';
+#detailFormation {
+    z-index: 1 !important;
+    ;
+}
+
+#formationCard {
+    transition: .5s all ease-in-out;
+}
+
+#formaBanner {
+    box-shadow: 0rem 0rem 1rem 0rem $graydark;
+    z-index: 6;
+}
+
+#formationSimilaire {
+    transition: .5s all ease-in-out;
+}
+
+.line {
+    display: block;
+    text-align: center;
+}
+
+.line hr {
+    display: inline-block;
+    border: .1rem solid $mysyscolor1;
+    background-color: $mysyscolor1;
+    color: $mysyscolor1;
+    min-width: 10rem;
+}
+
+.formation-section {
+    // display: flex;
+    // flex-wrap: nowrap;
+    // align-content: center;
+    // justify-content: space-between;
+    padding: 3rem 5rem;
+    color: $white;
+    // height: 80vh;
+}
+
+.formation-section::before {
+    filter: brightness(80%) !important;
+}
+
+.formation-section .formation-img-bg {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.d-card {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 2rem 0rem;
+    padding: 0;
+    min-width: 20rem;
+    max-width: 25rem;
+    min-height: 20rem;
+    background-color: $light !important;
+    color: $dark;
+    border-radius: .2rem !important;
+    -webkit-box-shadow: 0px 4px 20px -5px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0px 4px 20px -5px rgba(0, 0, 0, .4);
+    box-shadow: 0px 4px 20px -5px rgba(0, 0, 0, .4);
+    z-index: 10;
+}
+
+.d-card .d-card-header {
+    position: relative;
+    height: 40%;
+    width: 100%;
+    border-radius: .2rem;
+}
+
+.d-card .d-card-header .d-card-img {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .2rem;
+}
+
+.d-card .d-card-content {
+    position: relative;
+    padding: 1.5rem 2rem;
+    height: 60%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .formation-section {
+        padding: 3rem !important;
+    }
+    .d-card {
+        position: relative;
+        min-width: 15rem;
+        max-width: 30rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .formation-section {
+        padding: 3rem;
+    }
+    .d-card {
+        position: relative;
+        min-width: 20rem;
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .formation-section {
+        padding: 4rem;
+    }
+    .d-card {
+        position: relative;
+        min-width: 20rem;
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+    .d-card {
+        position: relative;
+        min-width: 20rem;
+        max-width: 20rem;
+    }
+}
