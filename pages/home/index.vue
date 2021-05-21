@@ -8,6 +8,7 @@
     <div>
       {{ formations }}
     </div>
+
     <Domaine />
     <OurService />
 
@@ -45,7 +46,7 @@ import Client from "@/components/home/Client";
 import Partenaire from "@/components/home/Partenaire";
 import Expertise from "@/components/home/Expertise";
 import Mission from "@/components/home/Mission";
-import NavBarForHome from "@/components/common/NavBarForHome.vue";
+import NavBarForHome from "~/components/common/layout/NavBarForHome.vue";
 import Contactez from "@/components/common/Contactez.vue";
 import { mapState } from "vuex";
 

@@ -6,7 +6,7 @@
           <div class="row p-4">
             <div class="col-lg-6 col-md-6 col-12">
               <img
-                src="../../assets/img/logos/logo_light.png"
+                src="@/assets/img/logos/logo_light.png"
                 alt="Logo MySYS"
                 height="35"
               />
@@ -143,7 +143,7 @@
 </template>
 
 <style lang="scss">
-@import "../../assets/css/footer.scss";
+@import "@/assets/css/footer.scss";
 </style>
 
 <script>

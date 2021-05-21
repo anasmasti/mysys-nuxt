@@ -187,7 +187,7 @@
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar.vue";
+import NavBar from "~/components/common/layout/NavBar.vue";
 import Client from "@/components/home/Client";
 import Partenaire from "@/components/home/Partenaire";
 

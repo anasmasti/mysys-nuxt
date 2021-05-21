@@ -3,7 +3,7 @@
   <!-- <img class="navbar-brand" height="60" src="../../assets/img/mysys-logo.png" alt="mysys-logo"> -->
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent border-0 text_light p-3 mx-lg-4">
     <router-link class="navbar-brand" to="#">
-      <img class="navbar-brand" height="35" src="../../assets/img/logos/logo_light.png" alt="mysys-logo">
+      <img class="navbar-brand" height="35" src="@/assets/img/logos/logo_light.png" alt="mysys-logo">
     </router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
           <router-link class="nav-link" to="/home">Accueil</router-link>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <router-link class="nav-link" to="/all-formation">Nos Formations</router-link>
+          <router-link class="nav-link" to="/formation/all-formation">Nos Formations</router-link>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
           <router-link class="nav-link" to="/all-services">Nos Services</router-link>
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: 'NavBarForHome',
+  
 }
 </script>
 

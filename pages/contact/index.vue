@@ -108,7 +108,7 @@
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar.vue";
+import NavBar from "@/components/common/layout/NavBar.vue";
 
 export default {
   components: {

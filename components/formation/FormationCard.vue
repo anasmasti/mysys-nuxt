@@ -32,9 +32,9 @@
         </small>
         
         <div class="d-block">
-          <router-link :to="{name: 'detailformation', params: { form_param: form.id } }" class="font-s3">
+          <NuxtLink to="detail-formation" class="font-s3">
             En savoir plus
-          </router-link>
+          </NuxtLink>
         </div>
       </div>    
     
@@ -47,7 +47,7 @@
 </template>
 
 <style lang="scss">
-  @import '../assets/css/allformation.scss';
+  @import '@/assets/css/allformation.scss';
 </style>
 
 <script>

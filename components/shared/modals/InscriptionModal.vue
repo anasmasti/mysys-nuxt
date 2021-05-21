@@ -83,7 +83,7 @@
 
 <script>
 export default {
-  name: 'InscriptionModal',
+  
   props: {
     formation: { type: [Object, Array], required: true }
   },

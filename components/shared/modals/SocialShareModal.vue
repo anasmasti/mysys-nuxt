@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: 'SocialShareModal',
+ 
   props: {
     formation: { type: [Object, Array], required: true }
   },

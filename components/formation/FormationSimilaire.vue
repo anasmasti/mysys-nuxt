@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import FormationCard from '../../components/FormationCard.vue'
+import FormationCard from './FormationCard.vue'
 
 export default {
-  name: 'FormationSimilaire',
+ 
   components: {
     FormationCard
   },

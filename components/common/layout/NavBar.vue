@@ -5,7 +5,7 @@
         <img
           class="navbar-brand"
           height="35"
-          src="../../assets/img/logos/logo_black.png"
+          src="@/assets/img/logos/logo_black.png"
           alt="mysys-logo"
         />
       </a>
@@ -26,7 +26,7 @@
             <NuxtLink class="nav-link" to="/home">Accueil</NuxtLink>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <NuxtLink class="nav-link" to="/all-formation"
+            <NuxtLink class="nav-link" to="/formation/all-formation"
               >Nos Formations</NuxtLink
             >
           </li>
@@ -58,7 +58,7 @@
 
 <script>
 export default {
-  name: "NavBar",
+ 
 };
 </script>
 

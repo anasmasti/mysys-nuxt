@@ -29,7 +29,7 @@
       <!-- end-btn-right -->
 
       <li class="w-auto" v-for="(thm, thmIdx) in themes_by_domaine" :key="thmIdx"
-        @click="handleAction('formationStore/setFormationsByTheme', thm.id)">
+        @click="handleAction('formation/setFormationsByTheme', thm.id)">
 
         <router-link :class="(currThemeId == thm.id && 'nav-link active') || 'nav-link'"
           :id="`theme${thm.id}-tab`" :to="`#theme${thm.id}`" data-toggle="tab" role="tab" :aria-controls="`theme${thm.id}`" aria-selected="true">
@@ -56,7 +56,7 @@
     <!-- >>>> else -->
     <ul v-if="!is_themeLoaded" class="onglet w-100 nav nav-tabs align-items-center text-center" id="myTab" role="tablist">
       <li class="col-12 loading p-0">
-        <img src="../../assets/img/loading2.gif" class="loading_img_sm" alt="loading pic">
+        <img src="@/assets/img/loading2.gif" class="loading_img_sm" alt="loading pic">
       </li>
     </ul>
     <!-- >>>> else -->
@@ -90,7 +90,7 @@
     </div>
     <!-- LOADING .. -->
     <div v-else-if="!has_formationError && !is_formationLoaded" class="loading">
-      <img src="../../assets/img/loading.gif" class="loading_img_sm">
+      <img src="@/assets/img/loading.gif" class="loading_img_sm">
     </div>
     <!-- LOADING .. -->
     <!-- ERROR .. -->
@@ -112,18 +112,17 @@
 </template>
 
 <style lang="scss">
-  @import '../../assets/css/allformation.scss';
+  @import '@/assets/css/allformation.scss';
 </style>
 
 <script>
-import NavBar from '../../components/common/NavBar.vue'
-import FormationCard from '../../components/FormationCard.vue'
-import Contactez from '../../components/common/Contactez.vue'
-import {  mapState } from 'vuex'
-// import { mapActions } from 'vuex'
+import NavBar from '@/components/common/layout/NavBar.vue'
+import FormationCard from '@/components/formation/FormationCard.vue'
+import Contactez from '@/components/common/Contactez.vue'
+import { mapState } from 'vuex'
 
 export default {
-  name: 'AllFormation',
+
   components: {
     NavBar,
     FormationCard,
@@ -141,39 +140,38 @@ export default {
     this.theme_param = this.$route.params.theme_param ? Math.round(this.$route.params.theme_param) : undefined;
   },
   async created() {
-    document.title = "MySYS - Formations";
     window.scrollTo(0, 0);
     
     // ****** DISPATCH ~ ACTIONS ****** //
     // get Data
-    await this.$store.dispatch('formationStore/fetchDomaineData');
-    await this.$store.dispatch('formationStore/fetchThemeData');
-    await this.$store.dispatch('formationStore/fetchFormationData');
+    await this.$store.dispatch('formation/fetchDomaineData');
+    await this.$store.dispatch('formation/fetchThemeData');
+    await this.$store.dispatch('formation/fetchFormationData');
 
     // SET CURRENT ID's
-    await this.$store.dispatch('formationStore/setCurrDomaineId', this.domaine_param);
-    await this.$store.dispatch('formationStore/setCurrThemeId', this.theme_param);
+    await this.$store.dispatch('formation/setCurrDomaineId', this.domaine_param);
+    await this.$store.dispatch('formation/setCurrThemeId', this.theme_param);
 
     // get domaine_by_id and themes_by_domaine
     // check if there are params
     if (this.domaine_param) {
-      await this.$store.dispatch('formationStore/setDomaineById', this.domaine_param);
-      await this.$store.dispatch('formationStore/setThemesByDomaine', this.domaine_param);
+      await this.$store.dispatch('formation/setDomaineById', this.domaine_param);
+      await this.$store.dispatch('formation/setThemesByDomaine', this.domaine_param);
     } else { // by defauls
-      await this.$store.dispatch('formationStore/setDomaineById');
-      await this.$store.dispatch('formationStore/setThemesByDomaine');
+      await this.$store.dispatch('formation/setDomaineById');
+      await this.$store.dispatch('formation/setThemesByDomaine');
     }
     // get theme_by_id and formations_by_theme
     if (this.theme_param) {
-      await this.$store.dispatch('formationStore/setThemeById', this.theme_param);
-      await this.$store.dispatch('formationStore/setFormationsByTheme', this.theme_param);
+      await this.$store.dispatch('formation/setThemeById', this.theme_param);
+      await this.$store.dispatch('formation/setFormationsByTheme', this.theme_param);
     } else {
-      await this.$store.dispatch('formationStore/setThemeById');
-      await this.$store.dispatch('formationStore/setFormationsByTheme');
+      await this.$store.dispatch('formation/setThemeById');
+      await this.$store.dispatch('formation/setFormationsByTheme');
     }
   },
   computed: {
-    ...mapState('formationStore',{
+    ...mapState('formation',{
          // *** data from state ***
     domaines: state => state.domaines,
     themes_by_domaine: state => state.themes_by_domaine,
@@ -207,12 +205,12 @@ export default {
     },
     async LoadThemesWithFormations(domaineId) {
       // changer le id domaine actuel
-      await this.$store.dispatch('formationStore/setCurrDomaineId', domaineId);
+      await this.$store.dispatch('formation/setCurrDomaineId', domaineId);
       //console.log("currDomaineId", domaineId)
       // récupérer les thèmes avec id domaine actuel
-      await this.$store.dispatch('formationStore/setThemesByDomaine', domaineId);
+      await this.$store.dispatch('formation/setThemesByDomaine', domaineId);
       // récupérer les formations du premier id theme (par defaut dans store)
-      await this.$store.dispatch('formationStore/setFormationsByTheme');
+      await this.$store.dispatch('formation/setFormationsByTheme');
     },
     // scroll
     ScrollLeft(valToScroll) { 

@@ -2,7 +2,7 @@
 <div>
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent border-0 text_light navforformation mx-lg-4">
     <NuxtLink class="navbar-brand" to="/">
-      <img class="navbar-brand" height="35" src="../../assets/img/logos/logo_light.png" alt="mysys-logo">
+      <img class="navbar-brand" height="35" src="@/assets/img/logos/logo_light.png" alt="mysys-logo">
     </NuxtLink>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
           <NuxtLink class="nav-link" to="/home"><i class="fa fa-home"></i></NuxtLink>
         </li>
         <li class="nav-item active mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <NuxtLink class="nav-link" to="/all-formation"><i class="fa fa-chevron-left"></i> Formations</NuxtLink>
+          <NuxtLink class="nav-link" to="/formation/all-formation"><i class="fa fa-chevron-left"></i> Formations</NuxtLink>
         </li>
       </ul>
       <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap mr-3">
@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'NavBarForDFormation',
+ 
 }
 </script>
 
