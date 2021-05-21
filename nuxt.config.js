@@ -47,21 +47,11 @@ export default {
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
 
-        baseURL: 'https://dashboard.mysys.ma',
+        baseUrl: 'https://dashboard.mysys.ma'
 
     },
 
-    publicRuntimeConfig: {
-        axios: {
-            browserBaseURL: process.env.BROWSER_BASE_URL
-        }
-    },
 
-    privateRuntimeConfig: {
-        axios: {
-            baseURL: process.env.BASE_URL
-        }
-    },
 
 
 

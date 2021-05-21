@@ -1,15 +1,3 @@
-<script>
-export default {
-  created() {
-    window.scrollTo(0, 0);
-    document.title = "MySYS • A Propos";
-  },
-};
-</script>
-
-<style lang="scss">
-@import "../../assets/css/about.scss";
-</style>
 <template>
   <div id="about">
     <NavBar />
@@ -199,17 +187,23 @@ export default {
 </template>
 
 <script>
-import NavBar from "../../components/common/NavBar.vue";
-import Client from "../../components/home/Client";
-import Partenaire from "../../components/home/Partenaire";
+import NavBar from "@/components/common/NavBar.vue";
+import Client from "@/components/home/Client";
+import Partenaire from "@/components/home/Partenaire";
 
 export default {
-  name: "About",
   components: {
     NavBar,
     Client,
     Partenaire,
   },
+  created() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
+
+<style lang="scss">
+@import "@/assets/css/about.scss";
+</style>

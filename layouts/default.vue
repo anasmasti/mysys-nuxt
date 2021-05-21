@@ -1,62 +1,66 @@
 <template>
   <div>
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+<style lang="scss">
+@import "@/assets/css/_style.scss";
+@import "@/assets/css/loading.scss";
+@import "@/assets/css/modal.scss";
 </style>
+
+<script>
+import Footer from "@/components/common/Footer.vue";
+import { mapState } from 'vuex';
+
+export default {
+
+  components: {
+    Footer,
+  },
+
+  mounted() {
+     this.$store.dispatch("formation/fetchDomaineData");
+     this.$store.dispatch("formation/fetchThemeData");
+     this.$store.dispatch("formation/setThemesByDomaine");
+    
+  },
+
+  fetch({context}) {
+     store.dispatch("formation/fetchDomaineData");
+     store.dispatch("formation/fetchThemeData");
+     store.dispatch("formation/setThemesByDomaine");
+  },
+
+   computed: {
+    ...mapState("formation", {
+      domaines: state => state.domaines,
+      themes: state => state.themes,
+      formations: state => state.formations,
+    }),
+  },
+
+
+  //  created() {
+
+  //   this.ScrollToTopEvent();
+  //   // ###### DISPATCH ~ ACTIONS ###### //
+
+  //   // await store.dispatch('FetchFormationData');
+  //   // await store.dispatch('SetFormationsByTheme');
+  // },
+ 
+  // methods: {
+  //   // **** UI EVENTS ****
+  //   ScrollToTopEvent() {
+  //     document.documentElement.scrollTop = document.body.scrollTop = 0;
+  //   },
+  //   DisplayBackTopOnScroll() {
+  //     let btnTop = document.getElementById("back_to_top");
+  //     btnTop.style.display = window.scrollY > 500 ? "inline-block" : "none";
+  //   },
+  // },
+};
+</script>

@@ -1,16 +1,3 @@
-<script>
-export default {
-  mounted() {},
-  created() {
-    window.scrollTo(0, 0);
-    document.title = "MySYS • Contact";
-  },
-};
-</script>
-
-<style lang="scss">
-@import "../../assets/css/contact.scss";
-</style>
 <template>
   <div id="contact">
     <NavBar />
@@ -25,26 +12,53 @@ export default {
                     <h1 class="text_bold title">Prenez Contact Avec Nous</h1>
                   </div>
                   <div class="form-group">
-                    <label class="col-form-label font_sm" for="nom">Nom Complet</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Ahmad Mohamed" autofocus/>
+                    <label class="col-form-label font_sm" for="nom"
+                      >Nom Complet</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nom"
+                      placeholder="Ahmad Mohamed"
+                      autofocus
+                    />
                   </div>
                   <div class="form-group">
                     <label class="col-form-label font_sm">Entreprise</label>
-                    <input type="text" class="form-control" placeholder="AhTech"/>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="AhTech"
+                    />
                   </div>
                   <div class="form-group">
                     <label class="col-form-label font_sm">Adresse E-Mail</label>
-                    <input type="email" class="form-control" placeholder="ahmadmohamed@gmail.com"/>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="ahmadmohamed@gmail.com"
+                    />
                   </div>
                   <div class="form-group">
                     <label class="col-form-label font_sm">Téléphone</label>
-                    <input type="text" class="form-control" placeholder="+212 6 61 54 54 54"/>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="+212 6 61 54 54 54"
+                    />
                   </div>
                   <div class="form-group">
                     <label class="col-form-label font_sm">Message</label>
-                    <textarea class="form-control" rows="10" placeholder="Ton Message"></textarea>
+                    <textarea
+                      class="form-control"
+                      rows="10"
+                      placeholder="Ton Message"
+                    ></textarea>
                   </div>
-                  <button type="submit" class="btn btn-lg btn-outline-dark font_sm">
+                  <button
+                    type="submit"
+                    class="btn btn-lg btn-outline-dark font_sm"
+                  >
                     Envoyer
                   </button>
                 </form>
@@ -94,13 +108,18 @@ export default {
 </template>
 
 <script>
-import NavBar from "../../components/common/NavBar.vue";
+import NavBar from "@/components/common/NavBar.vue";
 
 export default {
-  name: "Contact",
   components: {
     NavBar,
+  },
+  created() {
+    window.scrollTo(0, 0);
   },
 };
 </script>
 
+<style lang="scss">
+@import "@/assets/css/contact.scss";
+</style>

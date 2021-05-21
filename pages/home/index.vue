@@ -5,6 +5,9 @@
       <Landing />
     </div>
 
+    <div>
+      {{ formations }}
+    </div>
     <Domaine />
     <OurService />
 
@@ -34,16 +37,58 @@
 </template>
 
 <script>
+import Domaine from "@/components/home/Domaine";
+import Jumbotron from "@/components/home/Landing";
+import OurService from "@/components/home/OurService";
+import Chiffre from "@/components/home/Chiffre";
+import Client from "@/components/home/Client";
+import Partenaire from "@/components/home/Partenaire";
+import Expertise from "@/components/home/Expertise";
+import Mission from "@/components/home/Mission";
+import NavBarForHome from "@/components/common/NavBarForHome.vue";
+import Contactez from "@/components/common/Contactez.vue";
+import { mapState } from "vuex";
+
 export default {
-  // data() {
-  //   return {
-  //     // error: null,
-  //   };
+  components: {
+    NavBarForHome,
+    Domaine,
+    Jumbotron,
+    OurService,
+    Partenaire,
+    Chiffre,
+    Expertise,
+    Mission,
+    Client,
+    Contactez,
+  },
+
+  data() {
+    return {
+      error: null,
+    };
+  },
+
+  // async created() {
+  //   await this.$store.dispatch("formation/setThemesByDomaine");
+  //   await this.$store.dispatch("formation/fetchThemeData");
+  //   await this.$store.dispatch("formation/fetchDomaineData");
+
   // },
-  // mounted() {},
-  // created() {
-  //   document.title = "MySYS";
-  // },
-  // methods: {}, // mounted
+
+  // fetch data
+  async fetch({ store }) {
+    await store.dispatch("formation/fetchDomaineData");
+    await store.dispatch("formation/fetchThemeData");
+    await store.dispatch("formation/setThemesByDomaine");
+  },
+
+  computed: {
+    ...mapState("formation", {
+      domaines: (state) => state.domaines,
+      themes: (state) => state.themes,
+      formations: (state) => state.formations,
+    }),
+  },
 };
 </script>
