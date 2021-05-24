@@ -21,7 +21,10 @@ export default {
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [],
+    plugins: [
+        { src: '@/plugins/formation/convertJsonToView.js', ssr: false },
+        { src: '@/plugins/formation/displayCardOnScroll.js', ssr: false },
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: {
@@ -61,5 +64,6 @@ export default {
 
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {}
+    build: {
+    }
 }

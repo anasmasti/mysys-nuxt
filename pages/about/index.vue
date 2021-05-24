@@ -197,7 +197,7 @@ export default {
     Client,
     Partenaire,
   },
-  created() {
+  mounted() {
     window.scrollTo(0, 0);
   },
 };

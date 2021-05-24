@@ -114,7 +114,7 @@ export default {
   components: {
     NavBar,
   },
-  created() {
+  mounted() {
     window.scrollTo(0, 0);
   },
 };

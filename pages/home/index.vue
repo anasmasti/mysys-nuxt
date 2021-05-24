@@ -5,10 +5,6 @@
       <Landing />
     </div>
 
-    <div>
-      {{ formations }}
-    </div>
-
     <Domaine />
     <OurService />
 

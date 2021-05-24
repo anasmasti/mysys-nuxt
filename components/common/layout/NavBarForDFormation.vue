@@ -14,7 +14,7 @@
           <NuxtLink class="nav-link" to="/home"><i class="fa fa-home"></i></NuxtLink>
         </li>
         <li class="nav-item active mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <NuxtLink class="nav-link" to="/formation/all-formation"><i class="fa fa-chevron-left"></i> Formations</NuxtLink>
+          <NuxtLink class="nav-link" to="/formation/all"><i class="fa fa-chevron-left"></i> Formations</NuxtLink>
         </li>
       </ul>
       <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap mr-3">

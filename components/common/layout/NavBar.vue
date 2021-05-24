@@ -26,7 +26,7 @@
             <NuxtLink class="nav-link" to="/home">Accueil</NuxtLink>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <NuxtLink class="nav-link" to="/formation/all-formation"
+            <NuxtLink class="nav-link" to="/formation/all"
               >Nos Formations</NuxtLink
             >
           </li>

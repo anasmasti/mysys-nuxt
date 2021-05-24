@@ -43,7 +43,7 @@
               <i class="h5 mb-0 material-icons">update</i>
               <span class="font-weight-light"> Dernière mise à jour : </span>
               <span class="text-bold">
-                {{ $moment(formation_by_id.updated_at) || "--"  }}
+                {{ $moment(formation_by_id.updated_at) || "--" }}
               </span>
             </div>
             <span class="badge badge-primary mt-3"
@@ -299,7 +299,6 @@ import FormationSimilaire from "@/components/formation/FormationSimilaire.vue";
 import InscriptionModal from "@/components/shared/modals/InscriptionModal.vue";
 import SocialShareModal from "@/components/shared/modals/SocialShareModal.vue";
 export default {
-  
   components: {
     NavBarForDFormation,
     Contactez,
@@ -372,30 +371,24 @@ export default {
     // });
   },
   // ######### CREATED #########
-  async mounted () {
+  async mounted() {
     window.scrollTo(0, 0);
-    window.addEventListener("scroll", this.DisplayCardOnScroll);
+    window.addEventListener("scroll", this.$displayCardOnScroll(true));
     // ****** DISPATCH ~ ACTIONS ****** //
     await this.$store.dispatch("formation/fetchThemeData");
     await this.$store.dispatch("formation/fetchFormationData");
-    await this.$store.dispatch(
-      "formation/setFormationById",
-      this.form_param
-    );
+    await this.$store.dispatch("formation/setFormationById", this.form_param);
     await this.$store.dispatch(
       "formation/setFormationsByTheme",
       this.formation_by_id.mysystheme_id
     );
 
     // !TRANSFORMER LES PARAGRAPHS EN HTML
-    ConvertDataTextToView(this.formation_by_id.programme, "programme");
+    this.$ConvertDataTextToView(this.formation_by_id.programme, 'programme');
     this.isProgramLoaded = true;
-    ConvertDataTextToView(this.formation_by_id.objectif, "objectif");
+    this.$ConvertDataTextToView(this.formation_by_id.objectif, 'objectif');
     this.isObjectifLoaded = true;
     this.RemoveCurrentFormationObject(this.form_param);
-    document.title = `${
-      this.formation_by_id.name
-    } • ${this.formation_by_id.description.substring(0, 50)}...`;
   },
   // ######### COMPUTED #########
   computed: {
@@ -413,7 +406,7 @@ export default {
     // déclencher une function si les "params" changent
     $route: async function (to, from) {
       if (to !== from) {
-        // this.ResetAll();
+        this.ResetAll();
         // ****** DISPATCH ~ ACTIONS ****** //
         await this.$store.dispatch(
           "formation/setFormationById",
@@ -426,9 +419,9 @@ export default {
         );
 
         // !TRANSFORMER LES PARAGRAPHS EN HTML
-        ConvertDataTextToView(this.formation_by_id.programme, "programme");
+        this.$ConvertDataTextToView(this.formation_by_id.programme, 'programme');
         this.isProgramLoaded = true;
-        ConvertDataTextToView(this.formation_by_id.objectif, "objectif");
+        this.ConvertDataTextToView(this.formation_by_id.objectif, 'objectif');
         this.isObjectifLoaded = true;
 
         this.RemoveCurrentFormationObject(this.form_param);
@@ -444,53 +437,9 @@ export default {
         return formation.id !== formId;
       });
     },
-
-  }, // methods
-
- 
-        //  **** TRANSFORM CONTENT ****
-    TransformContent(textToTransform, symbol, tag, classes, addition) {
-      return textToTransform
-        ? textToTransform
-            .split(symbol)
-            .map(function (value, index) {
-              if (index % 2 == 0) {
-                return value;
-              } else {
-                return `<${tag} class="${classes}">${addition}${value}</${tag}>`;
-              }
-            })
-            .join("")
-        : null;
-    },
-    ConvertStringToHtml(textToConvert, domId) {
-      let domGoal = document.getElementById(domId);
-      let newDom = document.createElement("article");
-      newDom.innerHTML = textToConvert ? textToConvert : "(vide)";
-      domGoal.innerHTML = ""; // clean old paragraph
-      domGoal.append(newDom); // append new paragraph
-    },
-    ConvertDataTextToView(originText, domId) {
-      let myText = originText;
-      // remplacer les symboles du paragraph de formation par des tags HTML
-      this.dataTransform.map((trans) => {
-        let converted = this.TransformContent(
-          myText,
-          trans.symbol,
-          trans.tag,
-          trans.classes,
-          trans.addition
-        );
-        myText = converted;
-        //console.log("domId", domId);
-      });
-      // convert transformed text to HTML
-      this.ConvertStringToHtml(myText, domId);
-    },
-    // **** END TRANSFORM CONTENT ****
     //***************************************************************/
     ResetAll() {
-      // window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
       // récup. NOUVEAU paramètre
       this.form_param = parseInt(this.$route.params.form_param);
       // reset variable
@@ -506,72 +455,7 @@ export default {
     ScrollUserTo(elemId) {
       document.getElementById(elemId).scrollIntoView();
     },
-    DisplayCardOnScroll() {
-      let card = document.getElementById("formationCard");
-      // let formaJumboHeight = document.getElementById('formaSection').offsetHeight;
-      let formaSim = document.getElementById("formationSimilaire");
-      let formaBanner = document.getElementById("formaBanner");
-      let contactezHeight = document.getElementById("contactez").offsetHeight;
-      let detailFormaHeight = document.getElementById("detailFormation")
-        .offsetHeight;
-      let FooterHeight = document.getElementById("mysysFooter").offsetHeight;
-      let verticalPos = window.scrollY; // récupérer la position de scroll en px
-      let divHeight =
-        detailFormaHeight -
-        formaSim.offsetHeight -
-        contactezHeight -
-        FooterHeight; // récupérer la taille vertical de 'div'
-      //console.log('vert pos : ' + verticalPos + ' div height : ' + divHeight);
-      if (screen.width >= 1024) {
-        // fixer 'card' avec les grandes écrans
-        formaBanner.setAttribute("style", "display: none !important");
-        if (verticalPos > 100 && verticalPos < divHeight) {
-          card.setAttribute(
-            "style",
-            "position: fixed; top: 0; opacity: 1; z-index: 10;"
-          );
-          // hide formSimilaire on scroll
-          if (!this.isFormSimShowed) {
-            formaSim.setAttribute("style", "opacity: 0");
-          }
-        } else {
-          // laisser 'card' avec sa position d'origine
-          card.setAttribute(
-            "style",
-            "position: absolute; opacity: 1; z-index: 10;"
-          );
-        }
-        if (verticalPos > divHeight) {
-          card.setAttribute("style", "opacity: 0; z-index: 0;");
-          // *** show formSimilaire on scroll ***
-          formaSim.setAttribute("style", "opacity: 1");
-          this.isFormSimShowed = true;
-        }
-      } else if (screen.width < 1024) {
-        // laisser 'card' relative avec le jumbotron (position d'origine relative)
-        card.style.position = "relative";
-        // banner formation
-        if (verticalPos > 700 && verticalPos < divHeight) {
-          formaBanner.setAttribute(
-            "style",
-            "display: block; position: fixed; bottom: 0;"
-          );
-        } else {
-          // laisser 'formaBanner' avec sa position d'origine
-          formaBanner.setAttribute(
-            "style",
-            "display: block; position: relative;"
-          );
-        }
-        if (verticalPos > divHeight) {
-          formaBanner.style.display = "none";
-        }
-        // *** show formSimilaire on scroll ***
-        formaSim.setAttribute("style", "opacity: 1");
-        this.isFormSimShowed = true;
-      } // screen width
-    },
- 
+  }, // methods
 };
 </script>
 

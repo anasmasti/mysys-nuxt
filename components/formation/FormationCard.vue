@@ -17,9 +17,9 @@
       </div>
       <!-- card-content -->
       <div class="t-card-content">
-        <router-link :to="{name: 'detailformation', params: { form_param: form.id } }">
+        <NuxtLink :to="'detail/' + form.id">
           <h1 class="title h5 font-weight-bold">{{ form.name }}</h1>
-        </router-link>
+        </NuxtLink>
         <span class="description font-s4">
           {{ form.description ? form.description.substring(0, 100) + ".." : "--" }}
         </span>
@@ -32,7 +32,7 @@
         </small>
         
         <div class="d-block">
-          <NuxtLink to="detail-formation" class="font-s3">
+          <NuxtLink :to="'detail/' + form.id" class="font-s3">
             En savoir plus
           </NuxtLink>
         </div>

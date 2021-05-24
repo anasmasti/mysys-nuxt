@@ -15,7 +15,7 @@
           <router-link class="nav-link" to="/home">Accueil</router-link>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <router-link class="nav-link" to="/formation/all-formation">Nos Formations</router-link>
+          <router-link class="nav-link" to="/formation/all">Nos Formations</router-link>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
           <router-link class="nav-link" to="/all-services">Nos Services</router-link>
