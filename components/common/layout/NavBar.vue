@@ -1,14 +1,14 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-md navbar-light bg-transparent border-0 text_light p-3 mx-lg-4">
-      <a class="navbar-brand" href="/home">
+      <NuxtLink class="navbar-brand" to="/">
         <img
           class="navbar-brand"
           height="35"
           src="@/assets/img/logos/logo_black.png"
           alt="mysys-logo"
         />
-      </a>
+      </NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse justify-content-between align-items-center font_navbar" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mx-auto text-md-center text-left">
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <NuxtLink class="nav-link" to="/home">Accueil</NuxtLink>
+            <NuxtLink class="nav-link" to="/">Accueil</NuxtLink>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <NuxtLink class="nav-link" to="/formation/all"

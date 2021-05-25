@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse justify-content-between align-items-center font_navbar" id="navbarSupportedContent">
       <ul class="navbar-nav text-md-center ">
         <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <NuxtLink class="nav-link" to="/home"><i class="fa fa-home"></i></NuxtLink>
+          <NuxtLink class="nav-link" to="/"><i class="fa fa-home"></i></NuxtLink>
         </li>
         <li class="nav-item active mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
           <NuxtLink class="nav-link" to="/formation/all"><i class="fa fa-chevron-left"></i> Formations</NuxtLink>

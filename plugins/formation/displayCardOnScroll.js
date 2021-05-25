@@ -1,5 +1,3 @@
-
-
 export default ( _ , inject) => {
     
     inject( 'displayCardOnScroll' , (isFormSimShowed) => {

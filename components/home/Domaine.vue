@@ -28,7 +28,7 @@
           v-for="(dom, domIndex) in domaines"
           @click="handleAction('formation/setThemesByDomaine', dom.id)"
         >
-          <router-link
+          <Nuxt-link
             :class="(domIndex === 0 && 'nav-link active') || 'nav-link'"
             :id="`domaine${dom.id}-tab`"
             :to="`#domaine${dom.id}`"
@@ -42,7 +42,7 @@
                 {{ dom.name || "--" }}
               </span>
             </div>
-          </router-link>
+          </Nuxt-link>
         </li>
         <!-- button-right -->
         <button

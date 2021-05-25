@@ -2,9 +2,9 @@
 <div>
   <!-- <img class="navbar-brand" height="60" src="../../assets/img/mysys-logo.png" alt="mysys-logo"> -->
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent border-0 text_light p-3 mx-lg-4">
-    <router-link class="navbar-brand" to="#">
+    <NuxtLink class="navbar-brand" to="#">
       <img class="navbar-brand" height="35" src="@/assets/img/logos/logo_light.png" alt="mysys-logo">
-    </router-link>
+    </NuxtLink>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse justify-content-between align-items-center font_navbar" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto mx-auto text-md-center text-left">
         <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <router-link class="nav-link" to="/home">Accueil</router-link>
+          <router-link class="nav-link" to="/">Accueil</router-link>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
           <router-link class="nav-link" to="/formation/all">Nos Formations</router-link>

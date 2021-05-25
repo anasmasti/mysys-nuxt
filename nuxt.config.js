@@ -11,19 +11,23 @@ export default {
             { hid: 'description', name: 'description', content: '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet" }
         ]
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-        '~/assets/css/_style.scss'
+        '~/assets/css/_style.scss',
+        'slick-carousel/slick/slick.css',
+        'slick-carousel/slick/slick-theme.css'
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
         { src: '@/plugins/formation/convertJsonToView.js', ssr: false },
         { src: '@/plugins/formation/displayCardOnScroll.js', ssr: false },
+        { src: '@/plugins/home/domaine/scrollLeft.js', ssr: false },
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,6 +50,7 @@ export default {
         // https://go.nuxtjs.dev/bootstrap
         'bootstrap-vue/nuxt',
 
+        // social media sharing
         'vue-social-sharing/nuxt',
 
         // https://go.nuxtjs.dev/axios
@@ -53,15 +58,20 @@ export default {
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {
-
+    axios: {// base api url 
         baseUrl: 'https://dashboard.mysys.ma'
-
     },
 
+    // customize route configurations
+    router: {
+        linkExactActiveClass: 'nuxt-link-exact-active'
+    },
 
-
-
+    // customize loading configurations
+    loading: {
+        color: '#188eee',
+        height: '4px'
+    },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {

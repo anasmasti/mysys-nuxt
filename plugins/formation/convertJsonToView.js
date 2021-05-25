@@ -11,7 +11,6 @@ let dataTransform = [
     { symbol: '""', tag: 'q', classes: '', addition: '' },
 ];
 
-
 //  **** TRANSFORM CONTENT ****
 function TransformContent(textToTransform, symbol, tag, classes, addition) {
     try {

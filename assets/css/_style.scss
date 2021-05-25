@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&Comfortaa:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import 'variables';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&Comfortaa:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "variables";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
 }
 
 @font-face {
-    font-family: 'Pacifico';
+    font-family: "Pacifico";
     font-style: normal;
     font-weight: 400;
-    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+    src: local("Pacifico Regular"), local("Pacifico-Regular"),
+        url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -44,14 +45,12 @@ img {
     z-index: 100 !important;
 }
 
-
 /* width */
 
 ::-webkit-scrollbar {
-    width: .5rem;
-    height: .3rem;
+    width: 0.5rem;
+    height: 0.3rem;
 }
-
 
 /* Track */
 
@@ -59,13 +58,11 @@ img {
     background: $light;
 }
 
-
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
     background: $mysyscolor1;
 }
-
 
 /* Handle on hover */
 
@@ -78,27 +75,27 @@ img {
     font-size: 12px;
 }
 
-input[type=text],
-input[type=url],
-input[type=email],
-input[type=date],
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="date"],
 textarea {
     outline: none !important;
     border: none !important;
-    border-bottom: .2rem solid #eaeaea !important;
+    border-bottom: 0.2rem solid #eaeaea !important;
     border-radius: 0rem !important;
     box-shadow: none !important;
-    transition: .1s all linear;
+    transition: 0.1s all linear;
 }
 
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
-    text-overflow: '';
+    text-overflow: "";
     border-color: transparent !important;
     box-shadow: none !important;
-    border-bottom: .2rem solid #eaeaea !important;
+    border-bottom: 0.2rem solid #eaeaea !important;
     outline: none;
 }
 
@@ -106,14 +103,14 @@ select::-ms-expand {
     display: none !important;
 }
 
-input[type=text]:focus,
-input[type=url]:focus,
-input[type=email]:focus,
-input[type=date]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
 textarea:focus,
 select:focus {
     border: none !important;
-    border-bottom: .2rem solid $mysyscolor1 !important;
+    border-bottom: 0.2rem solid $mysyscolor1 !important;
 }
 
 .home {
@@ -135,9 +132,9 @@ select:focus {
     background-color: $mysyscolor1;
 }
 
-[class*=col-] {
+[class*="col-"] {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
 }
 
 a {
@@ -146,12 +143,12 @@ a {
 }
 
 span {
-    padding: .1rem;
-    margin: .1rem;
+    padding: 0.1rem;
+    margin: 0.1rem;
 }
 
 .nav-item {
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .nav-item:hover {
@@ -159,12 +156,12 @@ span {
 }
 
 .btn {
-    margin: .5rem
+    margin: 0.5rem;
 }
 
 // PERSONNALISER LE BORDER DES TABS
 .nav-tabs {
-    border-bottom: .1rem solid #cccccc !important;
+    border-bottom: 0.1rem solid #cccccc !important;
     margin-bottom: 0;
     color: $dark;
     overflow: scroll;
@@ -175,22 +172,33 @@ span {
 
 // ACTIVE CLASSES POUR LES LIENS ET LES TABS
 .navbar-nav .nav-link {
-    padding: 1rem .5rem !important;
+    padding: 1rem 0.5rem !important;
 }
 
-.navbar-nav .nav-link.active,
-.router-link-active {
-    box-shadow: 0px 3px 0px 0px $mysyscolor1;
-}
+// .navbar-nav .nav-link.active,
+// .router-link-active {
+//     box-shadow: 0px 3px 0px 0px $mysyscolor1;
+// }
 
-.nav-tabs .nav-link.active {
-    box-shadow: 0px 3px 0px 0px $mysyscolor1;
-    background-color: $mysyscolor1;
-    color: $light;
-}
+// .nav-tabs .nav-link.active {
+//     box-shadow: 0px 3px 0px 0px $mysyscolor1;
+//     background-color: $mysyscolor1;
+//     color: $light;
+// }
 
-.nav-tabs .nav-link.active:hover {
+// .nav-tabs .nav-link.active:hover {
+//     color: $light !important;
+// }
+
+// a.nuxt-link-active {
+//     // font-weight: bold;
+// }
+/* exact link will show the primary color for only the exact matching link */
+a.nuxt-link-exact-active {
+    background-color: $mysyscolor1 !important;
     color: $light !important;
+    font-weight: bold !important;
+    border-radius: 5px;
 }
 
 .nav-link {
@@ -201,19 +209,19 @@ span {
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: .2em;
-    margin: .3rem;
+    padding: 0.2em;
+    margin: 0.3rem;
     background-color: #ffffff90 !important;
     color: $mysyscolor1 !important;
-    border: .1rem solid $mysyscolor1 !important;
+    border: 0.1rem solid $mysyscolor1 !important;
     outline: 0 !important;
     border-radius: 5rem !important;
-    z-index: 5
+    z-index: 5;
 }
 
 .icon-btn:hover {
     background-color: $mysyscolor1 !important;
-    border: .1rem solid $white !important;
+    border: 0.1rem solid $white !important;
 }
 
 .w_fit_content {
@@ -226,11 +234,11 @@ span {
 
 .main-title {
     display: block;
-    padding: .5rem .5rem 1rem 1rem !important;
+    padding: 0.5rem 0.5rem 1rem 1rem !important;
     margin: 2rem 0rem 1.5rem 0rem !important;
     font-weight: 700;
-    border-left: .7rem solid $mysyscolor1;
-    border-radius: .5rem 0 0 0;
+    border-left: 0.7rem solid $mysyscolor1;
+    border-radius: 0.5rem 0 0 0;
 }
 
 .main-title .title {
@@ -286,12 +294,12 @@ span {
 
 .subtitle {
     display: inline-block;
-    border-left: .5rem solid $mysyscolor2;
-    padding: .2rem 1.5rem;
+    border-left: 0.5rem solid $mysyscolor2;
+    padding: 0.2rem 1.5rem;
     white-space: nowrap;
     min-width: 3rem;
     background-color: $mysyscolor1;
-    color: $white
+    color: $white;
 }
 
 .text_bold {
@@ -367,7 +375,7 @@ span {
 }
 
 .slick-dots {
-    bottom: 20px;
+    bottom: 20px !important;
     li button:before,
     li.slick-active button:before {
         color: transparent;
@@ -382,7 +390,7 @@ span {
         width: 20px;
     }
     li.slick-active button:before {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 }
 
@@ -390,24 +398,24 @@ span {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: .7rem;
+    padding: 0.7rem;
     margin: 0rem 1rem 3.5rem 2rem;
     background-color: $mysyscolor1;
     color: $white;
     border-radius: 50rem;
     cursor: pointer;
     z-index: 100;
-    transition: .3s all ease-in-out
+    transition: 0.3s all ease-in-out;
 }
 
 #back_to_top:hover {
     background-color: $mysyscolor2;
-    transform: translateY(-.5rem);
+    transform: translateY(-0.5rem);
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .main-title {
-        border-left: .4rem solid $mysyscolor1;
+        border-left: 0.4rem solid $mysyscolor1;
     }
     .main-title .title {
         font-size: 28px;
@@ -452,7 +460,7 @@ span {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .main-title {
-        border-left: .5rem solid $mysyscolor1;
+        border-left: 0.5rem solid $mysyscolor1;
     }
     .main-title .title {
         font-size: 32px;
@@ -537,10 +545,7 @@ span {
     }
 }
 
-@media only screen and (min-width: 923px)
-/*and (max-width: 1024px)*/
-
-{
+@media only screen and (min-width: 923px) /*and (max-width: 1024px) */ {
     .main-title .title {
         font-size: 42px;
     }

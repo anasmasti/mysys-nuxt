@@ -4,7 +4,7 @@
       <!-- <Countdown end="August 22, 2021" showDays showHours showMinutes showSeconds></Countdown></div> -->
       <router-link to="about" class="text-light btn btn-sm btn-outline-light font_sm">Savoir plus</router-link>
       <h1 class="display-3 font-xs-s10 text_bold">
-        MYSYS,UNE EXPERTISE AU SERVICE DE L'ENTREPRISE.
+        MYSYS, UNE EXPERTISE AU SERVICE DE L'ENTREPRISE.
       </h1>
     </div>
 
