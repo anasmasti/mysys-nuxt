@@ -13,6 +13,20 @@ export default {
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             { href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet" }
+        ],
+        script: [
+            {
+                src: "https://code.jquery.com/jquery-3.6.0.slim.min.js",
+                type: "text/javascript"
+            },
+            {
+                src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js",
+                type: "text/javascript"
+            },
+            {
+                src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+                type: "text/javascript"
+            }
         ]
     },
 
