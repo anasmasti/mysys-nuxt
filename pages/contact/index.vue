@@ -76,7 +76,7 @@
                 <ul style="list-style-type: none">
                   <li class="font_sm">+212522986758</li>
                   <li class="font_sm">+212522986758</li>
-                  <li class="font_sm">Mme Nadia: +212522986758</li>
+                  <li class="font_sm">Mme Nadia: +21252298758</li>
                 </ul>
                 <h6 class="text_bold">Adresse</h6>
                 <p class="font_sm">39 Rue Al Fourate, Casablanca 20330</p>
