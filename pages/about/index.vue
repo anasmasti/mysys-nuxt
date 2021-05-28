@@ -22,7 +22,7 @@
                 de la vie ne doit pas être qu’un slogan, le Centre de Formation
                 ITAB ACADEMY œuvre dans ce sens et à plusieurs niveaux de
                 formation et de qualification. Bonne découverte des formations
-                que nous vous proposons
+                que nous vous proposons.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@
                 base de prospects. Nous disposons d'un centre de compétence en
                 coaching Agile et nous accompagnons de grandes entreprises dans
                 une agilisation des processus avec certification, notamment via
-                la méthode Scrum
+                la méthode Scrum.
               </p>
             </div>
           </div>
@@ -116,13 +116,13 @@
               </div>
               <p>
                 Nous avons plusieurs antennes nationales et régionales nous
-                permettant d'être au plus proche de nos clients
+                permettant d'être au plus proche de nos clients.
               </p>
               <ul style="list-style-type: none">
                 <li>
                   <p>
                     <span class="text_bold">Maroc :</span> 39 Rue Al Fourate,
-                    Casablanca 20330
+                    Casablanca 20330.
                   </p>
                 </li>
               </ul>
@@ -141,7 +141,7 @@
                     <span class="text_bold">L'Engagement :</span> Nous donnons
                     le meilleur de nous même et nous sommes engagés à apporterun
                     vrai retour sur investissement et de la valeur tangible à
-                    nos clients
+                    nos clients.
                   </p>
                 </li>
                 <li>
@@ -149,7 +149,7 @@
                     <span class="text_bold">La Confiance :</span> Nous
                     construisons des relations de confiance Gagnant-Gagnant avec
                     nos partenaires basées sur une écoute permanente et une
-                    commonication transparente
+                    commonication transparente.
                   </p>
                 </li>
                 <li>
@@ -158,7 +158,7 @@
                     tournés vers l'avenir, avec une pédagogienovatrice et une
                     veille permanente pour faire monter en compétence nos
                     clients sur les dernières tendances en technologies et en
-                    Savoir-être
+                    Savoir-être.
                   </p>
                 </li>
               </ul>
