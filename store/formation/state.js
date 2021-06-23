@@ -22,7 +22,7 @@ export default () => ({
   domaineError: undefined,
   themeError: undefined,
   formationError: undefined,
-  // Has errors
+  // Has errors variables
   has_domaineError: false,
   has_themeError: false,
   has_formationError: false
