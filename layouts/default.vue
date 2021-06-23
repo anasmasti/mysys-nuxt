@@ -15,10 +15,8 @@
 import Footer from "@/components/common/layout/Footer.vue";
 
 export default {
-
   components: {
-    Footer,
-  },
-
+    Footer
+  }
 };
 </script>
