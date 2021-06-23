@@ -12,17 +12,17 @@ export default () => ({
   currDomaineId: undefined,
   currThemeId: undefined,
   currFormaId: undefined,
-  //is loaded
+  // Is loaded
   is_domaineLoaded: false,
   is_themeLoaded: false,
   is_formationLoaded: false,
   is_themesByDomaineLoaded: false,
   is_formationsByThemeLoaded: false,
-  //errors
+  // Errors
   domaineError: undefined,
   themeError: undefined,
   formationError: undefined,
-  //errors
+  // Has errors
   has_domaineError: false,
   has_themeError: false,
   has_formationError: false
